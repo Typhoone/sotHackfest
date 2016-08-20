@@ -1,12 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
+// /* GET home page. */
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
+
+//return job information related to category:category_id in every citys
+router.get('/search/:category_id', function (req, res, next) {
     
 });
+
 
 module.exports = router;
