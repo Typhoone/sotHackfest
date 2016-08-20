@@ -1,0 +1,130 @@
+{
+  "TotalCount": 2,
+  "Page": 1,
+  "PageSize": 2,
+  "List": [
+    {
+      "ListingId": 1145404811,
+      "Title": "Casual Customer Service Consultant - Wellington Re",
+      "Category": "5000-5021-5023-",
+      "StartPrice": 0,
+      "StartDate": "/Date(1471576612740)/",
+      "EndDate": "/Date(1474199999000)/",
+      "ListingLength": null,
+      "AsAt": "/Date(1471654290823)/",
+      "CategoryPath": "/Trade-Me-Jobs/Banking-finance-insurance/Tellers-branch-staff",
+      "Region": "Wellington",
+      "Suburb": "Wellington",
+      "NoteDate": "/Date(0)/",
+      "ReserveState": 3,
+      "IsClassified": true,
+      "PriceDisplay": "",
+      "Branding": {
+        "LargeSquareLogo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/square/2672269-1.png",
+        "LargeWideLogo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/wide/2672269-1.png"
+      },
+      "District": "Wellington",
+      "JobType": "FT",
+      "PayBenefits": "",
+      "Reference": "106582",
+      "ApplicationDetails": null,
+      "IsWorkPermitRequired": true,
+      "Instructions": "For more information and to submit your confidential application, please visit www.bnzcareers.co.nz and enter the job code 106582TM.\nApplications close Sunday, 28 August 2016. ",
+      "Listed": null,
+      "Keywords": null,
+      "JobCategory": null,
+      "JobSubcategory": null,
+      "Company": "Bank of New Zealand",
+      "JobLocation": "Wellington,Wellington",
+      "ContractLength": "CT",
+      "PayType": "HOURLY",
+      "JobPackId": null,
+      "Body": "Excellent opportunity to join our fabulous Wellington retail team in an entry level (all training provided) position with nothing but opportunities.",
+      "Agency": {
+        "Id": 4545,
+        "Name": "Bank Of New Zealand",
+        "Logo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/wide/2672269-1.png",
+        "Type": 256,
+        "BillingType": 256,
+        "Branding": {
+          "LargeSquareLogo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/square/2672269-1.png",
+          "LargeWideLogo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/wide/2672269-1.png"
+        },
+        "Agents": [
+          {
+            "FullName": "Liz Frankland",
+            "FirstName": "Liz"
+          }
+        ],
+        "IsJobAgency": true
+      },
+      "JobApplicationDetails": {
+        "OnlineApplicationType": 2,
+        "ContactName": "Bank of New Zealand",
+        "Website": "https://www.bnzcareers.co.nz/a?job=106582TM"
+      }
+    },
+    {
+      "ListingId": 1144198954,
+      "Title": "Customer Service Representative, Porirua Kiwibank",
+      "Category": "5000-5021-5023-",
+      "StartPrice": 0,
+      "StartDate": "/Date(1471403683577)/",
+      "EndDate": "/Date(1474027199000)/",
+      "ListingLength": null,
+      "AsAt": "/Date(1471654290823)/",
+      "CategoryPath": "/Trade-Me-Jobs/Banking-finance-insurance/Tellers-branch-staff",
+      "Region": "Wellington",
+      "Suburb": "Porirua",
+      "NoteDate": "/Date(0)/",
+      "ReserveState": 3,
+      "IsClassified": true,
+      "PriceDisplay": "",
+      "Branding": {
+        "LargeSquareLogo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/square/2371396-1.png",
+        "LargeWideLogo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/wide/2371396-1.png"
+      },
+      "District": "Porirua",
+      "JobType": "FT",
+      "PayBenefits": "",
+      "Reference": "PM1232906",
+      "ApplicationDetails": null,
+      "IsWorkPermitRequired": true,
+      "Instructions": "",
+      "Listed": null,
+      "Keywords": null,
+      "JobCategory": null,
+      "JobSubcategory": null,
+      "Company": "",
+      "JobLocation": "Wellington,Porirua",
+      "ContractLength": "PER",
+      "PayType": "HOURLY",
+      "JobPackId": null,
+      "Body": "Customer Service Representative, Porirua Kiwibank/PostShop, 37.5 hours per week, Monday to Friday, Enhance your banking experience",
+      "Agency": {
+        "Id": 3846,
+        "Name": "New Zealand Post",
+        "Logo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/wide/2371396-1.png",
+        "Type": 256,
+        "BillingType": 256,
+        "Branding": {
+          "LargeSquareLogo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/square/2371396-1.png",
+          "LargeWideLogo": "https://trademe.tmcdn.co.nz/tm/agentimages/jobs/wide/2371396-1.png"
+        },
+        "Agents": [
+          {
+            "FullName": "Amanda Tolley",
+            "FirstName": "Kate"
+          }
+        ],
+        "IsJobAgency": true
+      },
+      "JobApplicationDetails": {
+        "OnlineApplicationType": 2,
+        "ContactName": "Penny Mafra",
+        "Website": "https://careers.nzpost.co.nz/raspIntegration/jncustomsearch.viewFullSingle?in_organid=13131&in_jnCounter=222658395&in_site=TradeMe"
+      }
+    }
+  ],
+  "FoundCategories": []
+}
