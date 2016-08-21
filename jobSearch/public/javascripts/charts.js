@@ -1,10 +1,12 @@
 var regionPiechart;
 var suburbPiechart;
 var PayTypeRowChart;
+var tableChart ;
+var ndx;
 
 document.addEventListener("DOMContentLoaded", function(event) {
   // debugger;
-  var ndx = crossfilter(data.jobs);
+  ndx = crossfilter(data.jobs);
 
   // debugger;
 
@@ -59,10 +61,56 @@ document.addEventListener("DOMContentLoaded", function(event) {
     .elasticX(true)
 
 
+  tableChart = dc.dataTable("#pageDataTable");
 
+  var tableDim = ndx.dimension(function(d){return [d.Title, d.JobLocation, d.ListingId];})
+
+  // var tableGroup = tableDim.group().reduceSum(function(d){ return 1;});
+
+  grouping = function (d) { return [d.Title, d.JobLocation, d.ListingId];};
+
+
+  tableChart
+    .dimension(tableDim)
+    .group(grouping)
+    .size(Infinity)
+    .columns(['Title', 'Location', 'ID'])
+    .sortBy(function (d) { return [d.Title, d.JobLocation, d.ListingId]; })
+    .order(d3.ascending);
+
+  update()
 
 
 
   dc.renderAll()
 
 });
+
+// use odd page size to show the effect better
+var ofs = 0, pag = 9;
+function display() {
+    d3.select('#begin')
+        .text(ofs);
+    d3.select('#end')
+        .text(ofs+pag-1);
+    d3.select('#last')
+        .attr('disabled', ofs-pag<0 ? 'true' : null);
+    d3.select('#next')
+        .attr('disabled', ofs+pag>=ndx.size() ? 'true' : null);
+    d3.select('#size').text(ndx.size());
+}
+function update() {
+    tableChart.beginSlice(ofs);
+    tableChart.endSlice(ofs+pag);
+    display();
+}
+function next() {
+    ofs += pag;
+    update();
+    tableChart.redraw();
+}
+function last() {
+    ofs -= pag;
+    update();
+    tableChart.redraw();
+}
