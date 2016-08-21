@@ -1,3 +1,7 @@
+var regionPiechart;
+var suburbPiechart;
+var PayTypeRowChart;
+
 document.addEventListener("DOMContentLoaded", function(event) {
   // debugger;
   var ndx = crossfilter(data.jobs);
@@ -8,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var regionPieGroup = regionPieDim.group().reduceSum(function(d){return 1});
 
-  var regionPiechart = dc.pieChart("#majorRegion");
+  regionPiechart = dc.pieChart("#majorRegion");
 
   regionPiechart
     .group(regionPieGroup)
@@ -19,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   var suburbPieGroup = suburbPieDim.group().reduceSum(function(d){return 1});
 
-  var suburbPiechart = dc.pieChart("#suburb");
+  suburbPiechart = dc.pieChart("#suburb");
 
   suburbPiechart
     .group(suburbPieGroup)
@@ -41,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //   .width(200)
 
 
-  var PayTypeRowChart = dc.rowChart("#PayTypeRowChart");
+  PayTypeRowChart = dc.rowChart("#PayTypeRowChart");
 
   var PayTypeRowDim = ndx.dimension(function(d){return d.JobType;});
 

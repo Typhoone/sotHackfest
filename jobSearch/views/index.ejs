@@ -15,26 +15,31 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
+
     <div id="majorRegion" class="">
       <legend>Region
-        <a class="reset" href="javascript:month_chart.filterAll();dc.redrawAll()" style="display:none">Reset</a>
       </legend>
+      <a class="reset" href='javascript:regionPiechart.filterAll();dc.redrawAll()' >Reset</a>
+
     </div>
     <div id="suburb" class="">
       <legend>Region
-        <a class="reset" href="javascript:month_chart.filterAll();dc.redrawAll()" style="display:none">Reset</a>
       </legend>
+      <a class="reset" href='javascript:suburbPiechart.filterAll();dc.redrawAll()' >Reset</a>
+
     </div>
 
     <div id="TypeRowChart" class="">
       <legend>Region
-        <a class="reset" href="javascript:month_chart.filterAll();dc.redrawAll()" style="display:none">Reset</a>
       </legend>
+      <!-- <a class="reset" href='javascript:PayTypeRowGroup.filterAll();dc.redrawAll()' >Reset</a> -->
+
     </div>
 
     <br>
     <div id="PayTypeRowChart" class="">
       <legend>JobTpe</legend>
+      <a class="reset" href='javascript:PayTypeRowChart.filterAll();dc.redrawAll()' >Reset</a>
     </div>
 
 
