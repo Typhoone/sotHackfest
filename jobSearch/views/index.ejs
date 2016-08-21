@@ -4,43 +4,50 @@
     <title><%= title %></title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
-
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.0.0-beta.32/dc.js"></script>
     <script type="text/javascript" src="/javascripts/new_jobs.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.0.0-beta.32/dc.css">
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
+
     <div id="majorRegion" class="">
       <legend>Region
-        <a class="reset" href="javascript:month_chart.filterAll();dc.redrawAll()" style="display:none">Reset</a>
       </legend>
+      <a class="reset" href='javascript:regionPiechart.filterAll();dc.redrawAll()' >Reset</a>
+
     </div>
     <div id="suburb" class="">
       <legend>Region
-        <a class="reset" href="javascript:month_chart.filterAll();dc.redrawAll()" style="display:none">Reset</a>
       </legend>
+      <a class="reset" href='javascript:suburbPiechart.filterAll();dc.redrawAll()' >Reset</a>
+
     </div>
 
     <div id="TypeRowChart" class="">
       <legend>Region
-        <a class="reset" href="javascript:month_chart.filterAll();dc.redrawAll()" style="display:none">Reset</a>
       </legend>
+      <!-- <a class="reset" href='javascript:PayTypeRowGroup.filterAll();dc.redrawAll()' >Reset</a> -->
+
     </div>
 
     <br>
     <div id="PayTypeRowChart" class="">
       <legend>JobTpe</legend>
+      <a class="reset" href='javascript:PayTypeRowChart.filterAll();dc.redrawAll()' >Reset</a>
     </div>
 
-
-    <div id="pageDataTable">
-
-    </div>
+    <table id="pageDataTable"></table>
+  <div id="paging">
+    Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span>.
+    <input id="last" class="btn" type="Button" value="Last" onclick="javascript:last()" />
+    <input id="next" class="btn" type="button" value="Next" onclick="javascript:next()"/>
+  </div>
 
 
   </body>
