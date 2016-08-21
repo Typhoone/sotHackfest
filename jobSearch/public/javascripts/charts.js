@@ -101,6 +101,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     .width(500)
     .height(300)
 
+    var SubCategoryRowChart = dc.rowChart('#SubTypeRowChart')
+
+    SubCateDim = ndx.dimension(function(d){return d.CategoryPath.split('/')[3]})
+
+    subCateGroup = categoryRowDim.group().reduceSum(function(d){return 1})
+
+    SubCategoryRowChart
+      .group(subCateGroup)
+      .dimension(SubCateDim)
+      .cap(20)
+      .ordering(function(d){d.value})
+      .width(500)
+      .height(300)
+
 
 
   dc.renderAll()
