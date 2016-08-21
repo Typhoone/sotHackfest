@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     .group(PayTypeRowGroup)
     .dimension(PayTypeRowDim)
     // .x(d3.scale.linear().domain([0,100]))
-    .width(200)
+    .width(400)
     .elasticX(true)
 
 
