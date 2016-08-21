@@ -19,17 +19,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
   regionPiechart
     .group(regionPieGroup)
     .dimension(regionPieDim)
-    .legend(dc.legend())
+    .legend(dc.legend().autoItemWidth(true))
+    .height(400)
 
   var suburbPieDim = ndx.dimension(function(d){return d.Suburb});
 
   var suburbPieGroup = suburbPieDim.group().reduceSum(function(d){return 1});
 
-  suburbPiechart = dc.pieChart("#suburb");
+  suburbPiechart = dc.rowChart("#suburb");
 
   suburbPiechart
     .group(suburbPieGroup)
     .dimension(suburbPieDim)
+    .cap(20)
+    .ordering(function(d){d.value})
+    .width(500)
+    .height(400)
+    // .xAxis().xAxisPadding(50)
 
 
   // var JobTypeRowDim = ndx.dimension(function(d){return d.Title});
@@ -79,6 +85,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
     .order(d3.ascending);
 
   update()
+
+
+  var categoryRowChart = dc.rowChart('#TypeRowChart')
+
+  categoryRowDim = ndx.dimension(function(d){return d.CategoryPath.split('/')[2]})
+
+  categoryRowGroup = categoryRowDim.group().reduceSum(function(d){return 1})
+
+  categoryRowChart
+    .group(categoryRowGroup)
+    .dimension(categoryRowDim)
+    .cap(20)
+    .ordering(function(d){d.value})
+    .width(500)
+    .height(300)
 
 
 
