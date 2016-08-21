@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
     <title>Job Search</title>
 
+    <!-- Chart stuff -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.0.0-beta.32/dc.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.0.0-beta.32/dc.css">
+    <script type="text/javascript" src="/javascripts/new_jobs.js"></script>
+    <script type="text/javascript" src="/javascripts/charts.js"></script>
+
+
+
+
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-zhenwang.css"/>
     <link rel="stylesheet" href="css/animate.css"/>
@@ -16,25 +27,9 @@
 </head>
 <body style="background-color: gainsboro">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/jquery.singlePageNav.min.js"></script>
-<!--<script src="js/wz.js"></script>-->
-<script>
-    $(function () {
-        $('.nav').singlePageNav({
-            offset: 70
-        });
-        $('.navbar-collapse a').click(function () {
-            $('.navbar-collapse').collapse('hide');
-        });
-        new WOW().init();
-    })
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--<script src="javascripts/wz.js"></script>-->
 
-    window.onload = function () {
-        $('#lvjing').style.background = "blue";
-    }
-</script>
 
 <!--nav-->
 <nav class="navbar navbar-default navbar-fixed-top" style="margin: 0;padding: 0">
@@ -74,7 +69,7 @@
                 <h2 style="font-family:Josefin Sans;letter-spacing: 1mm;font-weight: bold">Regions in NZ</h2>
                 <!--hi Goldon:chart here-->
                 <!--<div style="background-color: #00B7FF;height: 200px;width: 600px;margin: 0;border: 0;padding: 0">-->
-                <div>
+                <div id="majorRegion">
                 </div>
 
             </div>
@@ -83,6 +78,9 @@
                 <h2 style="font-family:Josefin Sans;letter-spacing: 1mm;font-weight: bold">Cities in NZ</h2>
                 <!--hi Goldon:chart here-->
                 <!--</a>-->
+                <div id="suburb">
+
+                </div>
             </div>
         </div>
 
@@ -93,7 +91,7 @@
                 <h2 style="font-family:Josefin Sans;letter-spacing: 1mm;font-weight: bold">Regions in NZ</h2>
                 <!--hi Goldon:chart here-->
                 <!--<div style="background-color: #00B7FF;height: 200px;width: 600px;margin: 0;border: 0;padding: 0">-->
-                <div>
+                <div id="TypeRowChart">
                 </div>
 
             </div>
@@ -102,6 +100,9 @@
                 <h2 style="font-family:Josefin Sans;letter-spacing: 1mm;font-weight: bold">Cities in NZ</h2>
                 <!--hi Goldon:chart here-->
                 <!--</a>-->
+                <div id="PayTypeRowChart">
+
+                </div>
             </div>
         </div>
 
@@ -112,8 +113,12 @@
                 <h2 style="font-family:Josefin Sans;letter-spacing: 1mm;font-weight: bold">Regions in NZ</h2>
                 <!--hi Goldon:chart here-->
                 <!--<div style="background-color: #00B7FF;height: 200px;width: 600px;margin: 0;border: 0;padding: 0">-->
-                <div>
-                </div>
+                <table id="pageDataTable"></table>
+              <div id="paging">
+                Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span>.
+                <input id="last" class="btn" type="Button" value="Last" onclick="javascript:last()" />
+                <input id="next" class="btn" type="button" value="Next" onclick="javascript:next()"/>
+              </div>
 
             </div>
             <div class="col-md-6" style="background-color: white;height: 300px;">
